@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Button cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, sumar, restar, multiplicar, dividir, igual, borrar;
-    TextView input, resultado;
+    TextView  resultado;
     float number1, number2;
     boolean addition = false, subtraction = false, multiplication = false, division = false;
 
@@ -18,100 +18,99 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        cero = findViewById(R.id.zero);
-        uno = findViewById(R.id.one);
-        dos = findViewById(R.id.two);
-        tres = findViewById(R.id.three);
-        cuatro = findViewById(R.id.four);
-        cinco = findViewById(R.id.five);
-        seis = findViewById(R.id.six);
-        siete = findViewById(R.id.seven);
-        ocho = findViewById(R.id.eight);
-        nueve = findViewById(R.id.nine);
-        sumar = findViewById(R.id.add);
-        restar = findViewById(R.id.subtract);
-        multiplicar = findViewById(R.id.multiply);
-        dividir = findViewById(R.id.divide);
-        igual = findViewById(R.id.equal);
-        borrar = findViewById(R.id.clear);
-        input = findViewById(R.id.input);
-        resultado = findViewById(R.id.result);
+        cero = findViewById(R.id.btncero);
+        uno = findViewById(R.id.btn1);
+        dos = findViewById(R.id.btn2);
+        tres = findViewById(R.id.btn3);
+        cuatro = findViewById(R.id.btn4);
+        cinco = findViewById(R.id.btn5);
+        seis = findViewById(R.id.btn6);
+        siete = findViewById(R.id.btn7);
+        ocho = findViewById(R.id.btn8);
+        nueve = findViewById(R.id.btn9);
+        sumar = findViewById(R.id.btnmas);
+        restar = findViewById(R.id.btnmenos);
+        multiplicar = findViewById(R.id.btnmult);
+        dividir = findViewById(R.id.btndividir);
+        igual = findViewById(R.id.btnigual);
+        borrar = findViewById(R.id.btnborrar);
+        resultado = findViewById(R.id.resultado);
 
-        zero.setOnClickListener(new View.OnClickListener() {
+        cero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                input.setText(input.getText() + "0");
+                resultado.setText(resultado.getText() + "0");
             }
         });
 
-        one.setOnClickListener(new View.OnClickListener() {
+        uno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                input.setText(input.getText() + "1");
+                resultado.setText(resultado.getText() + "1");
             }
         });
 
-        two.setOnClickListener(new View.OnClickListener() {
+        dos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                input.setText(input.getText() + "2");
+                resultado.setText(resultado.getText() + "2");
             }
         });
 
-        three.setOnClickListener(new View.OnClickListener() {
+        tres.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                input.setText(input.getText() + "3");
+                resultado.setText(resultado.getText() + "3");
             }
         });
 
-        four.setOnClickListener(new View.OnClickListener() {
+        cuatro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                input.setText(input.getText() + "4");
+                resultado.setText(resultado.getText() + "4");
             }
         });
 
-        five.setOnClickListener(new View.OnClickListener() {
+        cinco.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                input.setText(input.getText() + "5");
+                resultado.setText(resultado.getText() + "5");
             }
         });
 
-        six.setOnClickListener(new View.OnClickListener() {
+        seis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                input.setText(input.getText() + "6");
+                resultado.setText(resultado.getText() + "6");
             }
         });
 
-        seven.setOnClickListener(new View.OnClickListener() {
+        siete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                input.setText(input.getText() + "7");
+                resultado.setText(resultado.getText() + "7");
             }
         });
 
-        eight.setOnClickListener(new View.OnClickListener() {
+        ocho.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                input.setText(input.getText() + "8");
+                resultado.setText(resultado.getText() + "8");
             }
         });
 
-        nine.setOnClickListener(new View.OnClickListener() {
+        nueve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                input.setText(input.getText() + "9");
+                resultado.setText(resultado.getText() + "9");
             }
         });
 
-        clear.setOnClickListener(new View.OnClickListener() {
+        borrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                input.setText("");
-                result.setText("");
+                resultado.setText("");
+                resultado.setText("");
                 addition = false;
                 subtraction = false;
                 multiplication = false;
@@ -119,11 +118,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        add.setOnClickListener(new View.OnClickListener() {
+        sumar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                number1 = Float.parseFloat(input.getText().toString());
-                input.setText("");
+                number1 = Float.parseFloat(resultado.getText().toString());
+                resultado.setText("");
                 addition = true;
                 subtraction = false;
                 multiplication = false;
@@ -131,11 +130,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        subtract.setOnClickListener(new View.OnClickListener() {
+        restar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                number1 = Float.parseFloat(input.getText().toString());
-                input.setText("");
+                number1 = Float.parseFloat(resultado.getText().toString());
+                resultado.setText("");
                 addition = false;
                 subtraction = true;
                 multiplication = false;
@@ -143,11 +142,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        multiply.setOnClickListener(new View.OnClickListener() {
+        multiplicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                number1 = Float.parseFloat(input.getText().toString());
-                input.setText("");
+                number1 = Float.parseFloat(resultado.getText().toString());
+                resultado.setText("");
                 addition = false;
                 subtraction = false;
                 multiplication = true;
@@ -155,11 +154,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        divide.setOnClickListener(new View.OnClickListener() {
+        dividir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                number1 = Float.parseFloat(input.getText().toString());
-                input.setText("");
+                number1 = Float.parseFloat(resultado.getText().toString());
+                resultado.setText("");
                 addition = false;
                 subtraction = false;
                 multiplication = false;
@@ -167,21 +166,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        equal.setOnClickListener(new View.OnClickListener() {
+        igual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                number2 = Float.parseFloat(input.getText().toString());
+                number2 = Float.parseFloat(resultado.getText().toString());
                 if (addition) {
-                    result.setText(String.valueOf(number1 + number2));
+                    resultado.setText(String.valueOf(number1 + number2));
                 }
                 if (subtraction) {
-                    result.setText(String.valueOf(number1 - number2));
+                    resultado.setText(String.valueOf(number1 - number2));
                 }
                 if (multiplication) {
-                    result.setText(String.valueOf(number1 * number2));
+                    resultado.setText(String.valueOf(number1 * number2));
                 }
                 if (division) {
-                    result.setText(String.valueOf(number1 / number2));
+                    resultado.setText(String.valueOf(number1 / number2));
                 }
             }
         });
